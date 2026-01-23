@@ -4,7 +4,7 @@ import About from './About.jsx';
 import ProductRequest from './ProductRequest.jsx';
 import Portfolio from './Portfolio.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect} from 'react';
 
 function App() {
   useEffect(() => {
