@@ -1,14 +1,28 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/ding-a-ling_website_frontend/DingALing-logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ding-a-ling_website</title>
-    <script type="module" crossorigin src="/ding-a-ling_website_frontend/assets/index-Cqi5FPMh.js"></script>
-    <link rel="stylesheet" crossorigin href="/ding-a-ling_website_frontend/assets/index-DBkz-poX.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/ding-a-ling_website_frontend/DingALing-logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ding-a-ling_website</title>
+  <script>
+    (function () {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+
+      if (redirect && redirect !== location.pathname + location.search + location.hash) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+
+  <script type="module" crossorigin src="/ding-a-ling_website_frontend/assets/index-Bn8U9TSS.js"></script>
+  <link rel="stylesheet" crossorigin href="/ding-a-ling_website_frontend/assets/index-DBkz-poX.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
 </html>
