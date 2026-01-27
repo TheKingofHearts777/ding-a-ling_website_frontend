@@ -12,7 +12,7 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter basename="/ding-a-ling_website_frontend">
+    <BrowserRouter>
       <Layout>
         <Routes>
           <Route path="ding-a-ling_website_frontend/" element={<Home />} />
