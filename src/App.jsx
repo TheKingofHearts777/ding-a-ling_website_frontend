@@ -15,10 +15,9 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="ding-a-ling_website_frontend/home" element={<Home />} />
-        <Route path="ding-a-ling_website_frontend/about" element={<About />} />
-        <Route path="ding-a-ling_website_frontend/product-request" element={<ProductRequest />} />
-        <Route path="ding-a-ling_website_frontend/portfolio" element={<Portfolio />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/product-request" element={<ProductRequest />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
     </Layout>
   )
