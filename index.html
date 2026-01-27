@@ -6,17 +6,6 @@
   <link rel="icon" type="image/png" href="/DingALing-logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ding-a-ling_website</title>
-  <script>
-    (function () {
-      var redirect = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-
-      if (redirect && redirect !== location.pathname + location.search + location.hash) {
-        history.replaceState(null, null, redirect);
-      }
-    })();
-  </script>
-
 </head>
 
 <body>
