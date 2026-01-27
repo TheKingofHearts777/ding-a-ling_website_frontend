@@ -4,7 +4,7 @@ import ProductRequest from './ProductRequest.jsx';
 import Portfolio from './Portfolio.jsx';
 import Home from './Home.jsx';
 import { Routes, Route } from 'react-router-dom';
-import { useEffect} from 'react';
+import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
@@ -12,14 +12,15 @@ function App() {
   }, [])
 
   return (
-      <Layout>
-        <Routes>
-          <Route path="ding-a-ling_website_frontend/home" element={<Home />} />
-          <Route path="ding-a-ling_website_frontend/about" element={<About />} />
-          <Route path="ding-a-ling_website_frontend/product-request" element={<ProductRequest />} />
-          <Route path="ding-a-ling_website_frontend/portfolio" element={<Portfolio />} />
-        </Routes>
-      </Layout>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="ding-a-ling_website_frontend/home" element={<Home />} />
+        <Route path="ding-a-ling_website_frontend/about" element={<About />} />
+        <Route path="ding-a-ling_website_frontend/product-request" element={<ProductRequest />} />
+        <Route path="ding-a-ling_website_frontend/portfolio" element={<Portfolio />} />
+      </Routes>
+    </Layout>
   )
 }
 
