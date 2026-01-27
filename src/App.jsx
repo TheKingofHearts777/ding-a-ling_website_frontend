@@ -8,7 +8,7 @@ import { useEffect} from 'react';
 
 function App() {
   useEffect(() => {
-    document.title = "Ding-A-Ling Website"
+    document.title = "Ding-A-Ling Blacksmiths";
   }, [])
 
   return (
