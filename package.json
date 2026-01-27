@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://thekingofhearts777.github.io/",
+  "homepage": "https://thekingofhearts777.github.io/ding-a-ling_website_frontend/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
