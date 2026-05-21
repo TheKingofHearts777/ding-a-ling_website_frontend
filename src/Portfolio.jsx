@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './App.css';
 
 export default function Portfolio() {
     const [products, setProducts] = useState([]);
@@ -36,14 +37,14 @@ export default function Portfolio() {
     }
 
     return (
-        <div>
-            <h1>Portfolio Page</h1>
-            <p>Welcome to the Portfolio page. Here you can find all the projects we've done.</p>
+        <section className="section-card">
             <div className="container">
+                <h1>Portfolio Page</h1>
+                <p>Welcome to the Portfolio page. Here you can find all the projects we've done.</p>
                 <div className="row">
                     {products.map(product => (
                         <div className="col-md-4" key={product.description} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-                            <div className="card mb-4 shadow-sm">
+                            <div className="card mb-4">
                                 <img src={product.image} className="card-img-top" alt={product.description} />
                                 <div className="card-body">
                                     <h5 className="card-title">{product.description}</h5>
@@ -53,6 +54,6 @@ export default function Portfolio() {
                     ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

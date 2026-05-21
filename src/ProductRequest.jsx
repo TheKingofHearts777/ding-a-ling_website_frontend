@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './App.css';
 
 export default function ProductRequest() {
     const [formData, setFormData] = useState({
@@ -55,7 +56,7 @@ export default function ProductRequest() {
     }
 
     return (
-        <div style={{ width: 'auto', maxWidth: '500px', margin: 'auto', padding: '20px', justifyContent: 'center', border: '1px solid #ccc', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)' }}>
+        <div className="card" style={{ maxWidth: '500px', margin: '2rem auto', width: 'auto' }}>
             <h1>Product Request</h1>
             <p>Time to complete varies on item and quantity.</p>
             <form onSubmit={handleSubmit}>
@@ -115,7 +116,7 @@ export default function ProductRequest() {
                     />
                 </div>
 
-                <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
+                <button type="submit" className="button">
                     Submit Request
                 </button>
             </form>
