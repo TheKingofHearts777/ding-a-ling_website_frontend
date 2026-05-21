@@ -3,7 +3,6 @@ import About from './About.jsx';
 import ProductRequest from './ProductRequest.jsx';
 import Portfolio from './Portfolio.jsx';
 import Home from './Home.jsx';
-import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
 
