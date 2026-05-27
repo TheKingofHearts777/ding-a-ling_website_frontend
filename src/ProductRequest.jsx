@@ -19,6 +19,7 @@ export default function ProductRequest() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
+        console.log('Attempting to send email...');
 
         let data;
         data = {
