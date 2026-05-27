@@ -27,8 +27,12 @@ export default function ProductRequest() {
             text: `Product Name: ${formData.productName}\nDescription: ${formData.description}\nQuantity: ${formData.quantity}\nEmail: ${formData.email}`,
         };
         document.getElementById('submit-button').disabled = true;
+        document.getElementById('submit-button').style.backgroundColor = 'gray';
+        document.getElementById('submit-button').innerText = 'Submitting...';
         sendEmail(data);
         document.getElementById('submit-button').disabled = false;
+        document.getElementById('submit-button').style.backgroundColor = '';
+        document.getElementById('submit-button').innerText = 'Submit Request';
     };
 
     const sendEmail = (data) => {
