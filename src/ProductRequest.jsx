@@ -28,12 +28,10 @@ export default function ProductRequest() {
             text: `Product Name: ${formData.productName}\nDescription: ${formData.description}\nQuantity: ${formData.quantity}\nEmail: ${formData.email}`,
         };
         document.getElementById('submit-button').disabled = true;
-        document.getElementById('submit-button').style.backgroundColor = 'gray';
-        document.getElementById('submit-button').innerText = 'Submitting...';
+        document.getElementById('submit-button').style.backgroundColor = 'lightgray';
         sendEmail(data);
         document.getElementById('submit-button').disabled = false;
-        document.getElementById('submit-button').style.backgroundColor = '';
-        document.getElementById('submit-button').innerText = 'Submit Request';
+        document.getElementById('submit-button').style.backgroundColor = '#007bff';
     };
 
     const sendEmail = (data) => {
@@ -57,7 +55,7 @@ export default function ProductRequest() {
             })
             .catch(error => {
                 console.error('Error sending email:', error)
-                alert('There was an error submitting your request. Please try again later.')
+                alert('There was an error submitting your request. Backend server is down.')
             });
     }
 
