@@ -30,7 +30,7 @@ export default function ProductRequest() {
     };
 
     const sendEmail = (data) => {
-        fetch('http://localhost:8080/send', {
+        fetch('https://ding-a-ling-website-backend.onrender.com/send', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
