@@ -26,7 +26,7 @@ export default function ProductRequest() {
             subject: `Confirmation of Product Request: ${formData.productName}`,
             text: `Product Name: ${formData.productName}\nDescription: ${formData.description}\nQuantity: ${formData.quantity}\nEmail: ${formData.email}`,
         };
-        document.body.getElementById('submit-button').disabled = true;
+        document.getElementById('submit-button').disabled = true;
         sendEmail(data);
     };
 
