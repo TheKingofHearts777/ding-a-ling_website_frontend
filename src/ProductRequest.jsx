@@ -26,6 +26,7 @@ export default function ProductRequest() {
             subject: `Confirmation of Product Request: ${formData.productName}`,
             text: `Product Name: ${formData.productName}\nDescription: ${formData.description}\nQuantity: ${formData.quantity}\nEmail: ${formData.email}`,
         };
+        document.body.getElementById('submit-button').disabled = true;
         sendEmail(data);
     };
 
@@ -115,7 +116,7 @@ export default function ProductRequest() {
                     />
                 </div>
 
-                <button type="submit" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
+                <button id="submit-button" type="submit" style={{ padding: '10px 20px', backgroundColor: '#007bff', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
                     Submit Request
                 </button>
             </form>
