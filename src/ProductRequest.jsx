@@ -19,12 +19,6 @@ export default function ProductRequest() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
-        setFormData({
-            productName: '',
-            description: '',
-            email: '',
-            quantity: '',
-        });
 
         let data;
         data = {
@@ -39,19 +33,25 @@ export default function ProductRequest() {
         fetch('http://localhost:8080/send', {
             method: 'POST',
             headers: {
-            'Content-Type': 'application/json',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
         })
-        .then(response => response.json())
-        .then(result => {
-            console.log('Email sent:', result);
-            alert('Product request submitted successfully!');
-        })
-        .catch(error => {
-            console.error('Error sending email:', error)
-            alert('There was an error submitting your request. Please try again later.')
-        });
+            .then(response => response.json())
+            .then(result => {
+                console.log('Email sent:', result);
+                alert('Product request submitted successfully!');
+                setFormData({
+                    productName: '',
+                    description: '',
+                    email: '',
+                    quantity: '',
+                });
+            })
+            .catch(error => {
+                console.error('Error sending email:', error)
+                alert('There was an error submitting your request. Please try again later.')
+            });
     }
 
     return (
