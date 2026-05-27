@@ -28,6 +28,7 @@ export default function ProductRequest() {
         };
         document.getElementById('submit-button').disabled = true;
         sendEmail(data);
+        document.getElementById('submit-button').disabled = false;
     };
 
     const sendEmail = (data) => {
