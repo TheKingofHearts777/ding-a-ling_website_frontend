@@ -55,7 +55,7 @@ export default function ProductRequest() {
     }
 
     return (
-        <div style={{ width: 'auto', maxWidth: '500px', margin: 'auto', padding: '20px', justifyContent: 'center', border: '1px solid #ccc', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)' }}>
+        <div style={{ width: 'auto', maxWidth: '500px', margin: 'auto', padding: '10px', justifyContent: 'center', border: '1px solid #ccc', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)' }}>
             <h1>Product Request</h1>
             <p>Time to complete varies on item and quantity.</p>
             <form onSubmit={handleSubmit}>
